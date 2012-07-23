@@ -1,9 +1,7 @@
 #ifndef VISIBILEGAMEOBJECT_H
 #define VISIBILEGAMEOBJECT_H
 #include <SFML\Graphics.hpp>
-#include "Game.h"
 #include <string>
-
 class VisibleGameObject
 {
 public:

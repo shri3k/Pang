@@ -1,7 +1,6 @@
 #ifndef MAINMENU_H
 #define MAINMENU_H
 
-#include "Game.h"
 #include <SFML\Graphics.hpp>
 #include <list>
 class MainMenu

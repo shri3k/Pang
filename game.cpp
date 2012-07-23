@@ -10,7 +10,7 @@ void Game::Start(void)
 	
 	_gameState = Game::ShowingSplash;
 
-	_player1.Load("bin/images/paddle.png");
+	_player1.Load("bin/img/paddle.png");
 	_player1.SetPosition((1024/2)-45,700);
 
 //	sf::ContextSettings settings = arena.getSettings();
@@ -87,13 +87,6 @@ void Game::ShowMenu()
 		_gameState = Game::Playing;
 		break;
 	}
-}
-
-PlayerPaddle::PlayerPaddle()
-{
-}
-PlayerPaddle::~PlayerPaddle()
-{
 }
 
 Game::GameState Game::_gameState = Uninitialized;
