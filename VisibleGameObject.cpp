@@ -1,9 +1,10 @@
 #include "VisibleGameObject.h"
+
 VisibleGameObject::VisibleGameObject()
 {
 	_isLoaded = false;
 }
-VisibleGameObject::VisibleGameObject()
+VisibleGameObject::~VisibleGameObject()
 {
 }
 void VisibleGameObject::Load(std::string filename)

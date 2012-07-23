@@ -1,15 +1,18 @@
 #include "Game.h"
 #include "SplashScreen.h"
 #include "MainMenu.h"
-#include <iostream>
-
 void Game::Start(void)
 {
 	if(_gameState != Uninitialized)
 		return;
+
+	arena.create(sf::VideoMode(1024,768,32),"Frameworks");
 	
 	_gameState = Game::ShowingSplash;
-	arena.create(sf::VideoMode(1024,768,32),"Frameworks");
+
+	_player1.Load("bin/images/paddle.png");
+	_player1.SetPosition((1024/2)-45,700);
+
 //	sf::ContextSettings settings = arena.getSettings();
 //	std::cout << settings.majorVersion << "." << settings.minorVersion << std::endl;
 	while(!IsExiting())
@@ -37,6 +40,7 @@ void Game::GameLoop(void)
 			while(arena.pollEvent(myEvent))
 			{
 				arena.clear(sf::Color(sf::Color::Yellow));
+				_player1.Draw(arena);
 				arena.display();
 
 				if(myEvent.type == sf::Event::Closed)
@@ -85,5 +89,13 @@ void Game::ShowMenu()
 	}
 }
 
+PlayerPaddle::PlayerPaddle()
+{
+}
+PlayerPaddle::~PlayerPaddle()
+{
+}
+
 Game::GameState Game::_gameState = Uninitialized;
 sf::RenderWindow Game::arena;
+PlayerPaddle Game::_player1;

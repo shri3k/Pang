@@ -1,14 +1,15 @@
-﻿Build started 7/20/2012 4:20:21 AM.
+﻿Build started 7/23/2012 7:29:30 AM.
      1>Project "C:\Users\Yojan\documents\visual studio 2012\Projects\SampleSFML_w_f\SampleSFML_w_f\SampleSFML_w_f.vcxproj" on node 2 (Build target(s)).
-         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt SplashScreen.cpp
-         SplashScreen.cpp
-         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Yojan\documents\visual studio 2012\Projects\SampleSFML_w_f\Debug\SampleSFML_w_f.exe" /INCREMENTAL /NOLOGO "sfml-audio-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-graphics-d.lib" "sfml-network-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Yojan\documents\visual studio 2012\Projects\SampleSFML_w_f\Debug\SampleSFML_w_f.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Yojan\documents\visual studio 2012\Projects\SampleSFML_w_f\Debug\SampleSFML_w_f.lib" /MACHINE:X86 Debug\game.obj
-         Debug\pang.obj
-         Debug\MainMenu.obj
-         Debug\SplashScreen.obj
-         SampleSFML_w_f.vcxproj -> C:\Users\Yojan\documents\visual studio 2012\Projects\SampleSFML_w_f\Debug\SampleSFML_w_f.exe
-     1>Done Building Project "C:\Users\Yojan\documents\visual studio 2012\Projects\SampleSFML_w_f\SampleSFML_w_f\SampleSFML_w_f.vcxproj" (Build target(s)).
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt PlayerPaddle.cpp VisibleGameObject.cpp game.cpp
+         game.cpp
+         VisibleGameObject.cpp
+     1>c:\users\yojan\documents\visual studio 2012\projects\samplesfml_w_f\samplesfml_w_f\playerpaddle.h(7): error C2504: 'VisibleGameObject' : base class undefined
+         PlayerPaddle.cpp
+     1>c:\users\yojan\documents\visual studio 2012\projects\samplesfml_w_f\samplesfml_w_f\game.h(25): error C2146: syntax error : missing ';' before identifier '_player1'
+     1>c:\users\yojan\documents\visual studio 2012\projects\samplesfml_w_f\samplesfml_w_f\game.h(25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+         Generating Code...
+     1>Done Building Project "C:\Users\Yojan\documents\visual studio 2012\Projects\SampleSFML_w_f\SampleSFML_w_f\SampleSFML_w_f.vcxproj" (Build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:01.84
+Time Elapsed 00:00:03.50

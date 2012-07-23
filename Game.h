@@ -3,8 +3,9 @@
 
 #ifndef GAME_H
 #define GAME_H
-
 #include <SFML\Graphics.hpp>
+#include <iostream>
+#include "PlayerPaddle.h"
 
 class Game
 {
@@ -21,6 +22,7 @@ private:
 
 	static GameState _gameState;
 	static sf::RenderWindow arena;
+	static PlayerPaddle _player1;
 };
 
 #endif // !GAME_H
