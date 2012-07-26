@@ -6,6 +6,7 @@
 #include <SFML\Graphics.hpp>
 #include <iostream>
 #include "PlayerPaddle.h"
+#include "GameObjectManager.h"
 
 class Game
 {
@@ -22,7 +23,7 @@ private:
 
 	static GameState _gameState;
 	static sf::RenderWindow arena;
-	static PlayerPaddle _player1;
+	static GameObjectManager _gameObjectManager;
 };
 
 #endif // !GAME_H

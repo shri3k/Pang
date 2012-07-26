@@ -8,10 +8,13 @@ void Game::Start(void)
 
 	arena.create(sf::VideoMode(1024,768,32),"Frameworks");
 	
-	_gameState = Game::ShowingSplash;
+	PlayerPaddle *_player1 = new PlayerPaddle();
+	_player1->Load("bin/img/paddle.png");
+	_player1->SetPosition((1024/2)-45,700);
 
-	_player1.Load("bin/img/paddle.png");
-	_player1.SetPosition((1024/2)-45,700);
+	_gameObjectManager.Add("Paddle1",_player1);
+
+	_gameState = Game::ShowingSplash;
 
 //	sf::ContextSettings settings = arena.getSettings();
 //	std::cout << settings.majorVersion << "." << settings.minorVersion << std::endl;
@@ -32,15 +35,16 @@ bool Game::IsExiting(void)
 
 void Game::GameLoop(void)
 {
+	sf::Event myEvent;
+	arena.pollEvent(myEvent);
 	switch(_gameState)
 	{
 	case Game::Playing:
 		{
-			sf::Event myEvent;
-			while(arena.pollEvent(myEvent))
-			{
 				arena.clear(sf::Color(sf::Color::Yellow));
-				_player1.Draw(arena);
+
+				_gameObjectManager.DrawAll(arena);
+
 				arena.display();
 
 				if(myEvent.type == sf::Event::Closed)
@@ -50,7 +54,6 @@ void Game::GameLoop(void)
 					if(myEvent.key.code == sf::Keyboard::Escape)
 						ShowMenu();
 				}
-			}
 			break;
 		}
 
@@ -91,4 +94,4 @@ void Game::ShowMenu()
 
 Game::GameState Game::_gameState = Uninitialized;
 sf::RenderWindow Game::arena;
-PlayerPaddle Game::_player1;
+GameObjectManager Game::_gameObjectManager;
